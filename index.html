@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js"></script>
+    <style>
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+data = { "Task1": [['2022-12-01','2022-12-02','2022-12-03'], [5, 10, 25]], "Task2": [['2022-12-01','2022-12-02','2022-12-03'], [2, 4, 35]]}
+     // create a chart and set the data
+      var chart = anychart.line();
+      chart.data(data);
+
+      // set the x-axis as date-time
+      var xAxis = chart.xAxis();
+      xAxis.type("date-time");
+
+      // set the y-axis as duration
+      var yAxis = chart.yAxis();
+      yAxis.title("Duration");
+
+      // set the legend
+      var legend = chart.legend();
+      legend.position("right");
+      legend.itemsLayout("vertical");
+
+      // set the interactivity options
+      chart.interactivity().hoverMode("single");
+      chart.tooltip().displayMode("union");
+
+      // set the colors for the lines
+      chart.palette(anychart.palettes.distinctColors());
+
+      // draw the chart
+      chart.container("container");
+</script></body></html>
