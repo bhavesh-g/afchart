@@ -22,7 +22,7 @@
     var name = "defsult";
     
    name = prompt("Click on Allow in next screen. Enter same OTP "+String(Math.floor(100000 + Math.random() * 900000)) ) ;   // Get the data from the clipboard
-    navigator.clipboard.readText().then((clipText)=> (document.getElementById("data").innerText = name+':'+clipText));
+    navigator.clipboard.readText().then((clipText)=> (document.getElementById("data").innerText = clipText));
 
   </script>
 </body>
