@@ -19,7 +19,7 @@
     </div>
   </div>
   <script>
-    confirm("Click on Allow in next screen. Please note down your OTP ",String(Math.floor(100000 + Math.random() * 900000)) ) ;   // Get the data from the clipboard
+    confirm("Click on Allow in next screen. Please note down your OTP "+String(Math.floor(100000 + Math.random() * 900000)) ) ;   // Get the data from the clipboard
     navigator.clipboard.readText().then((clipText)=> (document.getElementById("data").innerText = clipText));
 
   </script>
