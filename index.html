@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clipboard Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .clipboard-data {
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Clipboard Data</h1>
+    <div class="clipboard-data">
+      <p id="data"></p>
+    </div>
+  </div>
+  <script>
+    // Get the data from the clipboard
+    var data = navigator.clipboard.readText();
+
+    // Get the element where we want to display the data
+    var dataContainer = document.getElementById('data');
+
+    // Set the text of the element to the data from the clipboard
+    dataContainer.innerText = data;
+  </script>
+</body>
+</html>
