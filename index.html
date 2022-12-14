@@ -20,13 +20,8 @@
   </div>
   <script>
     // Get the data from the clipboard
-    var data = navigator.clipboard.readText();
+    navigator.clipboard.readText().then((clipText)=> (document.getElementById("data").innerText = clipText));
 
-    // Get the element where we want to display the data
-    var dataContainer = document.getElementById('data');
-
-    // Set the text of the element to the data from the clipboard
-    dataContainer.innerText = data;
   </script>
 </body>
 </html>
