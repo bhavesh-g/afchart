@@ -1,0 +1,55 @@
+<html>
+  <head></head>
+  <body>
+<!-- Include the chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<!-- Add an HTML canvas element where the chart will be rendered -->
+<canvas id="myChart"></canvas>
+
+<!-- Add the chart.js script -->
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          datasets: [{
+              label: 'Dataset 1',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [0, 10, 5, 2, 20, 30, 45]
+          },
+          {
+              label: 'Dataset 2',
+              backgroundColor: 'rgb(54, 162, 235)',
+              borderColor: 'rgb(54, 162, 235)',
+              data: [10, 15, 20, 25, 30, 35, 40]
+          }]
+      },
+
+      // Configuration options go here
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          },
+          legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                  fontColor: 'rgb(255, 99, 132)'
+              }
+          }
+      }
+  });
+</script>
+    </body>
+  </html>
